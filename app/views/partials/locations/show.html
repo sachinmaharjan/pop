@@ -1,0 +1,47 @@
+<div class="container location-show">
+  <div class="row">
+    <div class="col-md-10 inline">
+      <h2>{{location.quickTitle}}</h2>
+      <div class="signature">
+          <img class="description-img" ng-show="location.filepickerUrl != null" src="{{location.filepickerUrl}}" />
+        </div>
+      
+      <div class="signatures">
+        <div class="signature">
+          <label>Location Type: </label>{{location.type}}
+        </div>
+        <div class="signature">
+          <label>Description: </label>
+          <div ng-bind-html="location.descriptionText"></div>
+        </div>
+        <div class="signature">
+          <label>Address: </label>{{location.address}}
+        </div>
+        <div class="signature">
+          <label>Accomodates: </label>{{location.accomodates}}
+        </div>
+        <div class="signature">
+          <label>Rooms: </label>{{location.rooms}}
+        </div>
+        <div class="signature">
+          <label>BathRooms: </label>{{location.bathrooms}}
+        </div>
+        <div class="signature">
+          <label>Rate: </label>{{location.price | currency: '$'}} per hr.
+        </div>
+        <div class="signature">
+          <label>Hours: </label>{{location.hours}}
+        </div>
+        <div class="signature">
+          <label>Total Price: </label>{{location.price * location.hours | currency: '$'}}
+        </div>
+        <div class="signature">
+          <label>Amenties: </label>{{location.hours}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 inline">
+      <button ng-click="bookit()" class="btn btn-default">Book Now</button>
+    </div>
+  </div>
+</div>

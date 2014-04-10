@@ -1,0 +1,67 @@
+<div class="container">
+  <h1>New Location</h1>
+  <form ng-submit="create()" role="form">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="form-group">
+          <label>Quick Title</label>
+          <input class="form-control" type="text" ng-model="location.quickTitle" required />
+        </div>
+        
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="form-control" ui-tinymce="tinymceOptions"  ng-model="location.descriptionText"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Address</label><br>
+          <div class="sb-margin">
+            <input class="form-control l-input inline" type="text"   ng-model="location.address1" placeholder="123 main street"/>
+            <input class="form-control s-input inline" type="text"   ng-model="location.address2" placeholder="Apt. 12"/>
+          </div>
+          <div>
+            <input class="form-control m-input inline" type="text"   ng-model="location.city" placeholder="San Francisco"/>
+            <state-options class="field form-control m-input inline" name="state" ng-model="location.state"></state-options>
+            <input class="form-control s-input inline" type="text"   ng-model="location.zip" placeholder="94110"/>
+          </div>
+        </div>
+
+        <div class="form-group inline">
+          <label>Type</label>
+          <input class="form-control s-input" type="text" ng-model="location.type" min="1" max="360" />
+        </div>
+
+        <div class="form-group inline">
+          <label>Accomodates</label>
+          <input class="form-control s-input" type="text"   ng-model="location.accomodates" />
+        </div>
+        <div class="form-group inline">
+          <label>Rooms</label>
+          <input class="form-control xs-input" type="text"   ng-model="location.rooms"/>
+        </div>
+        <div class="form-group inline">
+          <label>Bathrooms</label>
+          <input class="form-control s-input" type="text"   ng-model="location.Bathrooms"/>
+        </div>
+        <div class="form-group inline">
+          <label>Price Per Hour</label>
+          <input class="form-control s-input" type="text"   ng-model="location.price"/>
+        </div>
+        <div class="form-group inline">
+          <label>Number of Hours</label>
+          <input class="form-control s-input" type="text"   ng-model="location.hours"/>
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Image</label>
+          <input type="button" class="form-control m-input" value="Choose Image" class="btn" ng-click="filepick()">
+        </div>
+        <input class="btn btn-default" type="submit" value="Save"/>
+      </div>
+      <br>
+      <!-- <div class="col-md-6 hidden-sm">
+        <h4>Preview</h4>
+        <ng-include src="'partials/locations/full_header'"></ng-include>
+      </div> -->
+    </div>
+  </form>
+</div>

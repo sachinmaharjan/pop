@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="jumbotron col-md-12">
+    <h2>Search</h2>
+    <p class="lead">
+      <input class="form-control inline m-input" placeholder="What?" type="text" />
+      <input class="form-control inline m-input" placeholder="Where?" type="text" />
+      <input class="form-control inline m-input" placeholder="When?" type="text" />
+    </p>
+    <p><a class="btn btn-lg btn-success" ng-href="/location/search">Search</a></p>
+  </div>
+
+  <h2>Trending Popits</h2>
+  <ul class="petitions">
+    <li class="petition-wide" ng-repeat="l in locations">
+    <img src="{{l.filepickerUrl}}+mini.jpg/convert?w=120&h=90">
+      <div class="stack-down">
+        <a ng-href="/locations/{{l._id}}" class="tagline">{{l.quickTitle}}</a>
+        <div class="stack-right">
+          <div class="author inline">
+            {{l.price | currency: '$'}} per hour
+            <div class="location">
+            {{l.address}}
+            </div>
+          </div>
+          <div class="supporters inline">
+              {{l.hours}} Max hours.
+          </div>
+          <!-- <div class="created inline">
+            <div class="created-at">
+              <span class="icon clock-icon"></span>
+              {{l.createdAt | amDateFormat:'MMMM Do, YYYY'}}
+            </div>
+          </div> -->
+          <div class="inline">
+          <a class="btn btn-default" href="/locations/{{l._id}}">View</a>
+        </div>
+        </div>
+        
+      </div>
+    </li>
+  </ul>
+</div>

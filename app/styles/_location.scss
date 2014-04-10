@@ -1,0 +1,58 @@
+.petition-show {
+  .image img {
+    max-width: 100%;
+  }
+  .description-text {
+    margin-top: 2em;
+    font-family: Georgia, Cambria;
+    font-size: 22px;
+    font-smoothing: antialiased;
+    line-height: 33px;
+
+  }
+}
+.signatures {
+  padding-left: 0px;
+  .signature {
+    list-style-type: none;
+    .signer {
+      display: flex;
+      justify-content: space-between;
+      .location {
+        color: $grey4;
+      }
+    }
+  }
+}
+
+.petitions {
+  padding-left: 0px;
+  .petition-wide {
+    margin-bottom: 10px;
+    list-style-type: none;
+    display: flex;
+    img {
+      flex-basis: 120px;
+      flex-shrink: 0;
+      height: 90px;
+    }
+    .tagline {
+      display: flex;
+      padding: 10px;
+      font-size: 14pt;
+      color: black;
+    }
+    .author, .supporters, .created {
+      width: 100px;
+      padding: 10px;
+    }
+  }
+}
+.stack-down {
+  flex-direction: column;
+}
+.stack-right {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
