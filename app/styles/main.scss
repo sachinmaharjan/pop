@@ -102,7 +102,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 1200px;
     }
 
     /* Remove the padding we set earlier */
@@ -159,4 +159,44 @@ width: 150px;
 .container .jumbotron {
 padding-left: 20px;
 padding-right: 20px;
+background-image: url('/images/background.jpg');
+background-repeat:no-repeat;
+background-size: 1500px 600px;
+background-position: 0px -40px;
+}
+.txt-big {
+height: 62px;
+margin-right: 0px;
+}
+
+.what {
+    width: 300px;
+}
+.where {
+    width: 100px;
+}
+.when {
+    width: 100px;
+}
+.lead {
+    background: rgba(57,60,61,0.8);
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+box-shadow: 0 0 5px rgba(0,0,0,0.5);
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+border: 1px solid rgba(0,0,0,0.8);
+padding: 4px;
+width: 645px;
+margin: 0 auto;
+}
+
+.inline {
+    display: inline-block;
+}
+.float-right {
+    float: right;
+}
+.float-left {
+    float: left;
 }

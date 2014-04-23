@@ -1,15 +1,14 @@
 <div class="container">
   <div class="jumbotron col-md-12">
-    <h2>Search</h2>
     <p class="lead">
-      <input class="form-control inline m-input" placeholder="What?" type="text" />
-      <input class="form-control inline m-input" placeholder="Where?" type="text" />
-      <input class="form-control inline m-input" placeholder="When?" type="text" />
-    </p>
-    <p><a class="btn btn-lg btn-success" ng-href="/location/search">Search</a></p>
+      <input class="form-control inline m-input txt-big what" placeholder="What?" type="text" />
+      <input class="form-control inline m-input txt-big where" placeholder="Where?" type="text" />
+      <input class="form-control inline m-input txt-big when" placeholder="When?" type="text" />
+      <a class="btn btn-md btn-success inline txt-big" ng-href="/location/search">Search</a></p>
   </div>
 
-  <h2>Trending Popits</h2>
+  <h2 class="inline">Trending Popits</h2>
+  <a href="/locations/new" class="inline float-right">New</a>
   <ul class="petitions">
     <li class="petition-wide" ng-repeat="l in locations">
     <img src="{{l.filepickerUrl}}+mini.jpg/convert?w=120&h=90">
@@ -25,7 +24,7 @@
           <div class="supporters inline">
               {{l.hours}} Max hours.
           </div>
-          <!-- <div class="created inline">
+          <!-- d<iv class="created inline">
             <div class="created-at">
               <span class="icon clock-icon"></span>
               {{l.createdAt | amDateFormat:'MMMM Do, YYYY'}}

@@ -58,7 +58,7 @@ angular.module('popitApp', [
     }]);
   })
   .run(function ($rootScope, $location, Auth) {
-    // filepicker.setKey("AYXDz8wVpTteR2hX06Cv8z");
+    filepicker.setKey("AYXDz8wVpTteR2hX06Cv8z");
 
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$routeChangeStart', function (event, next) {
